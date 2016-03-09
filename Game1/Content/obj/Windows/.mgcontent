@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/idle1.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/idle2.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/idle3.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/idle4.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/idle5.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/idle6.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/idle7.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/idle8.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/left1.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/left2.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/left3.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/left4.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/left5.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/left6.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/left7.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/left8.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/right1.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/right2.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/right3.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/right4.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/right5.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/right6.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/right7.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/right8.png</File>
+    <File>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/focus.png</File>
+  </SourceFiles>
+</SourceFileCollection>
