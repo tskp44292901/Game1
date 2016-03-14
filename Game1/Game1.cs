@@ -12,11 +12,17 @@ namespace Game1
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Character character;
+        System.TimeSpan now;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            graphics.PreferredBackBufferHeight = 920;
+            graphics.PreferredBackBufferWidth = 680;
             Content.RootDirectory = "Content";
+            now = new GameTime().TotalGameTime;
+            
+            
         }
 
         /// <summary>
@@ -29,7 +35,17 @@ namespace Game1
         {
             base.Initialize();
             // TODO: Add your initialization logic here
-            character = new Character("Reimu", this.Content.Load<Texture2D>("Reimu/idle1"), this.Content.Load<Texture2D>("Reimu/focus"), new Vector2(Window.ClientBounds.Width / 2, Window.ClientBounds.Height / 2));
+            Texture2D[] tempidle = new Texture2D[8];
+            Texture2D[] templeft = new Texture2D[8];
+            Texture2D[] tempright = new Texture2D[8];
+
+            for (int i = 0; i < tempidle.Length; i++)
+            {
+                tempidle[i] = this.Content.Load<Texture2D>(string.Format("Reimu/idle{0}", i + 1));
+                templeft[i] = this.Content.Load<Texture2D>(string.Format("Reimu/left{0}", i + 1));
+                tempright[i] = this.Content.Load<Texture2D>(string.Format("Reimu/right{0}", i + 1));
+            }
+            character = new Character("Reimu", tempidle, templeft, tempright, this.Content.Load<Texture2D>("Reimu/focus"), new Vector2(Window.ClientBounds.Width / 2, Window.ClientBounds.Height / 2));
         }
 
         /// <summary>
@@ -60,11 +76,17 @@ namespace Game1
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
 
             // TODO: Add your update logic here
-            character.Update(Keyboard.GetState().GetPressedKeys());
+            character.Update(Keyboard.GetState().GetPressedKeys(), Window);
+            if (gameTime.TotalGameTime - now > System.TimeSpan.FromMilliseconds(120))
+            {
+                character.UpdateFrame(Keyboard.GetState().GetPressedKeys());
+                now = gameTime.TotalGameTime;
+            }
+
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+                Exit();
             base.Update(gameTime);
         }
 
@@ -77,6 +99,7 @@ namespace Game1
             GraphicsDevice.Clear(Color.TransparentBlack);
             // TODO: Add your drawing code here
             spriteBatch.Begin();
+            spriteBatch.Draw(character.CurrentImg, character.Position, character.GetSelfRectangle(), Color.White, 0, character.GetSelfCenter(), 1.0f, SpriteEffects.None, 1);
             if (Keyboard.GetState().IsKeyDown(Keys.LeftShift))
                 spriteBatch.Draw(character.FocusImg, character.Position, character.GetFocusRectangle(), Color.White, character.Angle, character.GetFocusCenter(), 1.0f, SpriteEffects.None, 1);
             spriteBatch.End();

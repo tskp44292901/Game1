@@ -48,3 +48,6 @@ C:\Users\rsyi\documents\visual studio 2015\Projects\Game1\Game1\bin\Windows\Debu
 C:\Users\rsyi\documents\visual studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\Reimu\right6.xnb
 C:\Users\rsyi\documents\visual studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\Reimu\right7.xnb
 C:\Users\rsyi\documents\visual studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\Reimu\right8.xnb
+C:\Users\rsyi\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\Reimu\bg.xnb
+C:\Users\rsyi\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\Reimu\hp.xnb
+C:\Users\rsyi\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\Reimu\point.xnb
