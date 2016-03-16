@@ -65,24 +65,26 @@ namespace Game1
         }
         public void Move(Keys[] keys, GameWindow window)
         {
-            if (keys.Contains(Keys.Right) && !keys.Contains(Keys.Left) || !keys.Contains(Keys.Right) && keys.Contains(Keys.Left))
-            {
-                if (Position.X < window.ClientBounds.Width - GetSelfCenter().X && Position.X > 0 + GetSelfCenter().X)
-                    Position.X += (((keys.Contains(Keys.Right) ? Speed : 0) - (keys.Contains(Keys.Left) ? Speed : 0)) / (keys.Contains(Keys.LeftShift) ? 2 : 1));
-                else if (Position.X < 0 + GetSelfCenter().X)
-                    Position.X += (((keys.Contains(Keys.Right) ? Speed : 0) - 0) / (keys.Contains(Keys.LeftShift) ? 2 : 1));
-                else
-                    Position.X += ((0 - (keys.Contains(Keys.Left) ? Speed : 0)) / (keys.Contains(Keys.LeftShift) ? 2 : 1));
-            }
-            if (keys.Contains(Keys.Up) && !keys.Contains(Keys.Down) || !keys.Contains(Keys.Up) && keys.Contains(Keys.Down))
-            {
-                if (Position.Y < window.ClientBounds.Height - GetSelfCenter().Y && Position.Y > 0 + GetSelfCenter().Y)
-                    Position.Y += (((keys.Contains(Keys.Down) ? Speed : 0) - (keys.Contains(Keys.Up) ? Speed : 0)) / (keys.Contains(Keys.LeftShift) ? 2 : 1));
-                else if (Position.Y > window.ClientBounds.Height - GetSelfCenter().Y)
-                    Position.Y += ((0 - (keys.Contains(Keys.Up) ? Speed : 0)) / (keys.Contains(Keys.LeftShift) ? 2 : 1));
-                else
-                    Position.Y += (((keys.Contains(Keys.Down) ? Speed : 0) - 0) / (keys.Contains(Keys.LeftShift) ? 2 : 1));
-            }
+            Position.X += ((keys.Contains(Keys.Right) && !keys.Contains(Keys.Left) ? Speed : 0) * (Position.X < window.ClientBounds.Width - GetSelfCenter().X ? 1 : 0) - (keys.Contains(Keys.Left) && !keys.Contains(Keys.Right) ? Speed : 0) * (Position.X > 0 + GetSelfCenter().X ? 1 : 0)) / (keys.Contains(Keys.LeftShift) ? 2 : 1);
+            Position.Y += ((keys.Contains(Keys.Down) && !keys.Contains(Keys.Up) ? Speed : 0) * (Position.Y < window.ClientBounds.Height - GetSelfCenter().Y ? 1 : 0) - (keys.Contains(Keys.Up) && !keys.Contains(Keys.Down) ? Speed : 0) * (Position.Y > 0 + GetSelfCenter().Y ? 1 : 0)) / (keys.Contains(Keys.LeftShift) ? 2 : 1);
+            //if (keys.Contains(Keys.Right) && !keys.Contains(Keys.Left) || !keys.Contains(Keys.Right) && keys.Contains(Keys.Left))
+            //{
+            //    if (Position.X < window.ClientBounds.Width - GetSelfCenter().X && Position.X > 0 + GetSelfCenter().X)
+            //        Position.X += (((keys.Contains(Keys.Right) ? Speed : 0) - (keys.Contains(Keys.Left) ? Speed : 0)) / (keys.Contains(Keys.LeftShift) ? 2 : 1));
+            //    else if (Position.X < 0 + GetSelfCenter().X)
+            //        Position.X += (((keys.Contains(Keys.Right) ? Speed : 0) - 0) / (keys.Contains(Keys.LeftShift) ? 2 : 1));
+            //    else
+            //        Position.X += ((0 - (keys.Contains(Keys.Left) ? Speed : 0)) / (keys.Contains(Keys.LeftShift) ? 2 : 1));
+            //}
+            //if (keys.Contains(Keys.Up) && !keys.Contains(Keys.Down) || !keys.Contains(Keys.Up) && keys.Contains(Keys.Down))
+            //{
+            //    if (Position.Y < window.ClientBounds.Height - GetSelfCenter().Y && Position.Y > 0 + GetSelfCenter().Y)
+            //        Position.Y += (((keys.Contains(Keys.Down) ? Speed : 0) - (keys.Contains(Keys.Up) ? Speed : 0)) / (keys.Contains(Keys.LeftShift) ? 2 : 1));
+            //    else if (Position.Y > window.ClientBounds.Height - GetSelfCenter().Y)
+            //        Position.Y += ((0 - (keys.Contains(Keys.Up) ? Speed : 0)) / (keys.Contains(Keys.LeftShift) ? 2 : 1));
+            //    else
+            //        Position.Y += (((keys.Contains(Keys.Down) ? Speed : 0) - 0) / (keys.Contains(Keys.LeftShift) ? 2 : 1));
+            //}
         }
         public void Focus(Keys[] keys)
         {

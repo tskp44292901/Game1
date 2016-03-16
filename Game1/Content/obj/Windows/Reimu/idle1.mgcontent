@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/rsyi/documents/visual studio 2015/Projects/Game1/Game1/Content/Reimu/idle1.png</SourceFile>
+  <SourceFile>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/Reimu/idle1.png</SourceFile>
   <SourceTime>2013-10-27T19:42:39+01:00</SourceTime>
-  <DestFile>C:/Users/rsyi/documents/visual studio 2015/Projects/Game1/Game1/Content/bin/Windows/Reimu/idle1.xnb</DestFile>
-  <DestTime>2016-03-14T13:26:59.6463274+01:00</DestTime>
+  <DestFile>C:/Users/rsyi/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/bin/Windows/Reimu/idle1.xnb</DestFile>
+  <DestTime>2016-03-15T10:49:51.7850219+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2015-04-29T19:14:44+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
